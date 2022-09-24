@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function Header() {
   return (
@@ -19,7 +20,7 @@ function Header() {
                 <Link to="/signin" className="header__link">
                     <div className='header__options'>
                         <label className='first_line'>Hello</label>
-                        <label className='second_line'>SignIn</label>
+                        <label className='second_line'>Sign In</label>
                     </div>
                 </Link>
                 <Link to="/" className="header__link">
@@ -32,6 +33,12 @@ function Header() {
                     <div className='header__options'>
                         <label className='first_line'>Your</label>
                         <label className='second_line'>Prime</label>
+                    </div>
+                </Link>
+                <Link to="/checkout" className="header__link">
+                    <div className='cart'>
+                        <ShoppingCartOutlinedIcon className='first_line basket' />
+                        <label className='second_line items-count'>0</label>
                     </div>
                 </Link>
             </div>

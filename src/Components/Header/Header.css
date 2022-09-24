@@ -2,17 +2,22 @@
     background-color: #131921;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 .header__logo{
     width: 100px;
-    margin: 0px 20px;
+    margin: 0px 40px;
     margin-top: 18px;
     object-fit: contain;
     
 }
 .header__search{
+    margin-left: 40px ;
+    margin-right: 50px ;
     display: flex;
     flex: 1;
+    border: none;
 }
 
 .header__searchIcon{
@@ -41,8 +46,8 @@
     
 }
 .header__options{
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -53,4 +58,12 @@
 .second_line{
     font-size: 14px;
     font-weight: 600;
+}
+.cart{
+    display: flex;
+    align-items: center;
+}
+.items-count{
+    margin-left: 5px;
+    margin-right: 5px;
 }
