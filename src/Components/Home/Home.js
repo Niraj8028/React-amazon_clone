@@ -7,8 +7,24 @@ import './Home.css'
 function Home() {
   return (
     <div className='home'>
-        <img className='home-banner' alt='banner' src='https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg'/>
-        <Product/>
+        <img className='home-banner' alt='banner' src='https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg'/>\
+        <div className='product-rows'>
+          <Product/>
+          <Product/>
+          <Product/>
+          
+        </div>
+        
+        <div className='product-rows'>
+          <Product/>
+          <Product/>
+          
+        </div>
+        <div className='product-rows'>
+          <Product/>
+          
+        </div>
+        
     </div>
     
     

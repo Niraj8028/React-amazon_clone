@@ -1,6 +1,7 @@
 .header{
     background-color: #131921;
     display: flex;
+    z-index: 2;
     align-items: center;
     position: sticky;
     top: 0;

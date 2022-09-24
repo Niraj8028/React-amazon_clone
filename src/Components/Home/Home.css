@@ -6,8 +6,13 @@
 
 .home-banner{
     margin-top: 0px ;
-    
+    z-index: -1;
     width: 100%;
     mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
-    
+    margin-bottom: -350px;
+}
+.product-rows{
+    display: flex;
+    z-index: 1;
+    margin: 10px;
 }
