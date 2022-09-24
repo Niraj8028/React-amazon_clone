@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from '../Header/Header'
+import Product from '../Product/Product'
 import './Home.css'
+
 
 function Home() {
   return (
     <div className='home'>
-        <Header/>
-        
         <img className='home-banner' alt='banner' src='https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg'/>
+        <Product/>
     </div>
     
     
