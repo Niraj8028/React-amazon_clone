@@ -12,6 +12,7 @@ function Header() {
 
     const {cart}=useContext(UserContext);
     // let cart=['niraj','suraj'];
+    // console.log(cart);
     
   return (
     <Link to='/'>

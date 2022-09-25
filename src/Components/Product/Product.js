@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../Context/UserContext'
 import "./Product.css"
 
-function Product() {
+function Product({title,description,rating,price,src}) {
+    // const [{cart},dispatch]=useContext(UserContext);
     return (
         <div className='product'>
             <div className='product-info'>
