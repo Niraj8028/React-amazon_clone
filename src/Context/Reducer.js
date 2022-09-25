@@ -1,5 +1,5 @@
 export const initialState={
-    cart:[],
+    cart:['niraj','suraj'],
 }
 
 
@@ -13,6 +13,7 @@ export const reducer=(state,action)=>{
             break;
     
         default:
-            break;
+            return state
+           
     }
 }

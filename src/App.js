@@ -6,28 +6,32 @@ import Checkout from './Components/Checkout';
 import Header from './Components/Header/Header';
 
 import Home from './Components/Home/Home';
-import { userContext } from './Context/Context';
 
 import { initialState, reducer } from './Context/Reducer';
+import { UserContext } from './Context/UserContext';
 
 function App() {
+  
   const[state,dispatch]=useReducer(reducer,initialState);
+
   return (
-    <userContext value={{state,dispatch}}>
+    <UserContext.Provider value={{state,dispatch}}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>
-          <Header />
+          
+            <Header />
+          
           <Home />
           </div>} />
         <Route path="/signin" element={<div>signin</div>} />
         <Route path="/signup" element={<div>signup</div>} />
         <Route path="/Cart" element={<Checkout />} />
       </Routes>
-
+  
 
     </BrowserRouter>
-    </userContext>
+    </UserContext.Provider>
   );
 }
 
