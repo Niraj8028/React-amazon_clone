@@ -3,7 +3,22 @@ import { UserContext } from '../../Context/UserContext'
 import "./Product.css"
 
 function Product({title,id,rating,price,src}) {
-    // const [{cart},dispatch]=useContext(UserContext);
+    // const [dispatch]=useContext(UserContext);
+
+    const HandleCart=()=>{
+        // dispatch({
+        //     type:'ADD_TO_CART',
+        //     item:{
+        //         id:id,
+        //         title:title,
+        //         rating:rating,
+        //         price:price,
+        //         src:src
+        //     }
+        // })
+        console.log("ADD_TO_CART");
+    }
+
     return (
         <div className='product'>
             <div className='product-info'>
@@ -18,7 +33,7 @@ function Product({title,id,rating,price,src}) {
                     </div>
 
                     <p className='price'><strong>$</strong>{price}</p>
-                    <button className='add-to-cart'>
+                    <button onClick={HandleCart} className='add-to-cart'>
                         <p className='btn-text'>Add to Cart</p>
                     </button>
                 

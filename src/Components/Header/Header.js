@@ -11,8 +11,7 @@ import { UserContext } from '../../Context/UserContext';
 function Header() {
 
     const {cart}=useContext(UserContext);
-    // let cart=['niraj','suraj'];
-    // console.log(cart);
+    
     
   return (
     <Link to='/'>
@@ -47,7 +46,7 @@ function Header() {
                 <Link to="/checkout" className="header__link">
                     <div className='cart'>
                         <ShoppingCartOutlinedIcon className='first_line basket' />
-                        <label className='second_line items-count'>{cart?.length}</label>
+                        <label className='second_line items-count'>{0}</label>
                     </div>
                 </Link>
             </div>

@@ -1,0 +1,40 @@
+.checkout{
+    display: flex;
+}
+.item-img{
+    max-height: 150px;
+    
+}
+.checkout__item{
+    margin: 20px auto;
+    display: flex;
+    width: 70%;
+    padding: 5px 10px;
+    background-color: white;
+}
+.product_title{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+.product_price{
+    margin: 5px 10px;
+}
+.remove_from_cart{
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.rating{
+    display: flex;
+    margin: 5px 10px;
+}
+.total{
+    width: 20%;
+}
