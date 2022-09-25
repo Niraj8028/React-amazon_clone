@@ -1,8 +1,9 @@
 export const initialState={
     cart:[],
-};
+}
 
-function reducer(state,action){
+
+export const reducer=(state,action)=>{
     switch (action.type) {
         case 'ADD_TO_CART':
             //
@@ -12,8 +13,6 @@ function reducer(state,action){
             break;
     
         default:
-
-            return state;
+            break;
     }
 }
-export default reducer;
