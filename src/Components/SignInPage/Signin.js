@@ -1,7 +1,9 @@
-
+import { auth } from '../firebase'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
+
 import './Signin.css'
+
 
 function Signin() {
     const [email, setEmail] = useState("")
@@ -10,11 +12,21 @@ function Signin() {
 
     const login = (e) => {
         e.preventDefault();
-        console.log(email);
+        auth.signInWithEmailAndPassword(email,password)
+        .then((auth)=>{
+
+        })
+        .catch(event=>alert(event.message))
+        
+        
     }
     const register = (e) => {
         e.preventDefault();
-        console.log(password);
+       auth.createUserWithEmailAndPassword(email,password)
+       .then((auth)=>{
+
+       })
+       .catch(event=>alert(event.message))
     }
 
 

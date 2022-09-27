@@ -1,8 +1,9 @@
-import React, { useReducer } from 'react';
+import React, { useReducer,useEffect} from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Checkout from './Components/Checkout/Checkout';
+
 
 import Header from './Components/Header/Header';
 
@@ -11,6 +12,8 @@ import Signin from './Components/SignInPage/Signin';
 
 import { initialState, reducer } from './Context/Reducer';
 import { UserContext } from './Context/UserContext';
+
+
 
 function App() {
   
