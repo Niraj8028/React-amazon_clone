@@ -17,29 +17,29 @@ import { UserContext } from './Context/UserContext';
 function App() {
   
   const[state,dispatch]=useReducer(reducer,initialState);
-  const[{cart},dispatched]=useContext(UserContext);
+  // const[{cart},dispatched]=useContext(UserContext);
 
-  useEffect(() => {
-    const unsubscribe= auth.onAuthStateChanged((authuser)=>{
-      if(authuser){
-        dispatch({
-          type:"SET_USER",
-          user:authuser
-        })
-      }
-      else{
-        dispatch({
-          type:"SET_USER",
-          user:null,
-        })
-      }
-    })
+  // useEffect(() => {
+  //   const unsubscribe= auth.onAuthStateChanged((authuser)=>{
+  //     if(authuser){
+  //       dispatch({
+  //         type:"SET_USER",
+  //         user:authuser
+  //       })
+  //     }
+  //     else{
+  //       dispatch({
+  //         type:"SET_USER",
+  //         user:null,
+  //       })
+  //     }
+  //   })
   
-    return()=>{
-      unsubscribe()
-    }
+  //   return()=>{
+  //     unsubscribe()
+  //   }
     
-  }, [])
+  // }, [])
   
 
   return (

@@ -4,15 +4,23 @@ import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { UserContext } from '../../Context/UserContext';
+import userEvent from '@testing-library/user-event';
+import { auth } from '../firebase';
 
 
 
 
 function Header() {
 
-    const {cart}=useContext(UserContext);
-    
-    
+    // const [{cart,user}]=useContext(UserContext);
+    const user=null;
+
+    const signin=()=>{
+        if(user){
+            auth.signOut();
+        }
+    }
+     
   return (
     <Link to='/'>
         <nav className='header'>
@@ -25,10 +33,10 @@ function Header() {
                 
 
             <div className='header__navlinks'>
-                <Link to="/signin" className="header__link">
+                <Link to={!user && "/signin"} className="header__link">
                     <div className='header__options'>
-                        <label className='first_line'>Hello</label>
-                        <label className='second_line'>Sign In</label>
+                        <label className='first_line'>Hello User</label>
+                        <label onClick={signin} className='second_line'>{user ? "Sign out":"sign in"}</label>
                     </div>
                 </Link>
                 <Link to="/" className="header__link">
