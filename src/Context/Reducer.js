@@ -1,7 +1,7 @@
 
-
 export const initialState={
     cart:['niraj','suraj'],
+    user:null,
 }
 export const getCartTotal=(cart)=>{
     cart?.reduce((amount,item)=>item.price+amount,0)
@@ -9,6 +9,13 @@ export const getCartTotal=(cart)=>{
 
 export const reducer=(state,action)=>{
     switch (action.type) {
+        case 'SET_USER':
+            return{
+                ...state,
+                user:action.user
+            }
+
+
         case 'ADD_TO_CART':
             return{
                 ...state,
