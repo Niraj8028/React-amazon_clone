@@ -1,0 +1,30 @@
+.signin{
+    background-color: white;
+    height: 100vh;
+}
+.signin_container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: solid 1px lightgray;
+}
+.title{
+    margin-bottom:10px ;
+}
+.logo{
+    width: 100px;
+    margin: 10px  ;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.signin_container >form >h5{
+    margin-bottom: 5px;
+}
+.signin_container >form >input{
+    margin-bottom: 10px;
+    height: 30px;
+}

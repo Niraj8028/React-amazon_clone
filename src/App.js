@@ -7,6 +7,7 @@ import Checkout from './Components/Checkout/Checkout';
 import Header from './Components/Header/Header';
 
 import Home from './Components/Home/Home';
+import Signin from './Components/SignInPage/Signin';
 
 import { initialState, reducer } from './Context/Reducer';
 import { UserContext } from './Context/UserContext';
@@ -23,7 +24,7 @@ function App() {
             <Header />     
             <Home />
         </div>} />
-        <Route path="/signin" element={<div>signin</div>} />
+        <Route path="/signin" element={<Signin/>} />
         <Route path="/signup" element={<div>signup</div>} />
         <Route path="/checkout" element={<div>   
             <Header />     
