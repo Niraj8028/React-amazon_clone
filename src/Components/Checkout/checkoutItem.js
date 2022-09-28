@@ -22,7 +22,7 @@ function CheckoutItem({title,id,rating,price,src}) {
                         <p>&#9733;</p>
                         <p>&#9733;</p>
                     </div>
-                <p className='product_price'><strong>{price}</strong></p>
+                <p className='product_price'><strong>${price}</strong></p>
                 <button className='remove_from_cart' onClick={remove_from_cart}>Remove Item</button>
             </div>
         </div>
