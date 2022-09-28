@@ -14,7 +14,7 @@ function Header() {
 
     const [{cart},dispatch]=useContext(UserContext);
     const user=null;
-
+    console.log(cart);
     const signin=()=>{
         if(user){
             auth.signOut();
