@@ -6,6 +6,7 @@ function CheckoutItem({title,id,rating,price,src}) {
     const[{cart},dispatch]=useContext(UserContext)
 
     const remove_from_cart=()=>{
+        
         dispatch({
             type:'REMOVE_FROM_CART',
             id:id,

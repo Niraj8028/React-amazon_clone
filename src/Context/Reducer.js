@@ -9,6 +9,7 @@ export const getCartTotal=(cart)=>{
 }
 
 export const reducer=(state,action)=>{
+    console.log(action.type);
     switch (action.type) {
         case 'SET_USER':
             return{
@@ -31,7 +32,7 @@ export const reducer=(state,action)=>{
                 (item)=>item.id===action.id
             )
             if(index>=0){
-                temp.splice(index,0);
+                temp.splice(index,1);
             }
             else{
                 console.warn("Already Removed From Cart")
