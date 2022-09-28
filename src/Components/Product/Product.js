@@ -1,21 +1,21 @@
 import React, { useContext } from 'react'
-import { UserContext } from '../../Context/UserContext'
+import { UserContext, useStateValue } from '../../Context/UserContext'
 import "./Product.css"
 
 function Product({title,id,rating,price,src}) {
-    // const [dispatch]=useContext(UserContext);
+    const [{cart},dispatch]=useContext(UserContext);
 
     const HandleCart=()=>{
-        // dispatch({
-        //     type:'ADD_TO_CART',
-        //     item:{
-        //         id:id,
-        //         title:title,
-        //         rating:rating,
-        //         price:price,
-        //         src:src
-        //     }
-        // })
+        dispatch({
+            type:'ADD_TO_CART',
+            item:{
+                id:id,
+                title:title,
+                rating:rating,
+                price:price,
+                src:src
+            }
+        })
         console.log("ADD_TO_CART");
     }
 

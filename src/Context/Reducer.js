@@ -1,8 +1,9 @@
 
 export const initialState={
-    cart:['niraj','suraj'],
+    cart:['niraj'],
     user:null,
 }
+
 export const getCartTotal=(cart)=>{
     cart?.reduce((amount,item)=>item.price+amount,0)
 }

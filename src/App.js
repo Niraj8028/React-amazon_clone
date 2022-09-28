@@ -10,7 +10,7 @@ import Home from './Components/Home/Home';
 import Signin from './Components/SignInPage/Signin';
 
 import { initialState, reducer } from './Context/Reducer';
-import { UserContext } from './Context/UserContext';
+
 
 
 
@@ -43,7 +43,7 @@ function App() {
   
 
   return (
-    <UserContext.Provider value={{state,dispatch}}>
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>   
@@ -60,7 +60,7 @@ function App() {
   
 
     </BrowserRouter>
-    </UserContext.Provider>
+    
   );
 }
 

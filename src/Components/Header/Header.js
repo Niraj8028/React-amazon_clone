@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { UserContext } from '../../Context/UserContext';
+import { UserContext, useStateValue } from '../../Context/UserContext';
 import userEvent from '@testing-library/user-event';
 import { auth } from '../firebase';
 
@@ -12,7 +12,7 @@ import { auth } from '../firebase';
 
 function Header() {
 
-    // const [{cart,user}]=useContext(UserContext);
+    const [{cart},dispatch]=useContext(UserContext);
     const user=null;
 
     const signin=()=>{
@@ -54,7 +54,7 @@ function Header() {
                 <Link to="/checkout" className="header__link">
                     <div className='cart'>
                         <ShoppingCartOutlinedIcon className='first_line basket' />
-                        <label className='second_line items-count'>{0}</label>
+                        <label className='second_line items-count'>{cart.length}</label>
                     </div>
                 </Link>
             </div>
