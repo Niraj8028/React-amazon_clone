@@ -1,11 +1,13 @@
 import { auth } from '../firebase'
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import './Signin.css'
 
 
 function Signin() {
+    let navigate=useNavigate();
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -14,7 +16,8 @@ function Signin() {
         e.preventDefault();
         auth.signInWithEmailAndPassword(email,password)
         .then((auth)=>{
-
+            console.log("success");
+            navigate("/")
         })
         .catch(event=>alert(event.message))
         
@@ -24,7 +27,7 @@ function Signin() {
         e.preventDefault();
        auth.createUserWithEmailAndPassword(email,password)
        .then((auth)=>{
-
+        navigate("/")
        })
        .catch(event=>alert(event.message))
     }

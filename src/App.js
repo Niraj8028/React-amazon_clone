@@ -8,38 +8,37 @@ import Header from './Components/Header/Header';
 
 import Home from './Components/Home/Home';
 import Signin from './Components/SignInPage/Signin';
-
-import { initialState, reducer } from './Context/Reducer';
+import { UserContext } from './Context/UserContext';
 
 
 
 
 function App() {
   
-  const[state,dispatch]=useReducer(reducer,initialState);
-  // const[{cart},dispatched]=useContext(UserContext);
-
-  // useEffect(() => {
-  //   const unsubscribe= auth.onAuthStateChanged((authuser)=>{
-  //     if(authuser){
-  //       dispatch({
-  //         type:"SET_USER",
-  //         user:authuser
-  //       })
-  //     }
-  //     else{
-  //       dispatch({
-  //         type:"SET_USER",
-  //         user:null,
-  //       })
-  //     }
-  //   })
   
-  //   return()=>{
-  //     unsubscribe()
-  //   }
+  const[{cart},dispatch]=useContext(UserContext);
+
+  useEffect(() => {
+    const unsubscribe= auth.onAuthStateChanged((authuser)=>{
+      if(authuser){
+        dispatch({
+          type:"SET_USER",
+          user:authuser
+        })
+      }
+      else{
+        dispatch({
+          type:"SET_USER",
+          user:null,
+        })
+      }
+    })
+  
+    return()=>{
+      unsubscribe()
+    }
     
-  // }, [])
+  }, [])
   
 
   return (
