@@ -9,7 +9,7 @@ function Checkout() {
   const[{cart},dispatch]=useContext(UserContext)
   const amount=0;
   return (<>
-    <h1 className='title'>Shopping Cart</h1>
+    <h1 className='title'>Your Shopping Cart</h1>
       <div className='checkout'>
         <div className='checkout__items'>
         {cart.map((item)=>(
@@ -24,9 +24,12 @@ function Checkout() {
           />
         ))}
         </div>
+        <div>
         {
           cart.length>0 && <Subtotal />
         }
+        </div>
+        
        
       </div>
   </>

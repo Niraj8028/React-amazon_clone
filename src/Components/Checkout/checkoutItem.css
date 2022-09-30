@@ -1,16 +1,21 @@
 .checkout__item{
+    /* width: 1000px; */
     display: flex;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
 }
 
 .item-img{
     object-fit: contain;
     height: 180px;
     width: 180px;
+    padding: 2px;
 }
 .checkout__itemdetails{
-    padding-left: 20px;
+    padding: 10px;
 }
 .remove_from_cart{
     background-color: #f0c14b;
