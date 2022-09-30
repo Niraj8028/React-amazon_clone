@@ -12,14 +12,15 @@ import { auth } from '../firebase';
 
 function Header() {
 
-    const [{cart},dispatch]=useContext(UserContext);
-    const user=null;
+    const [{cart,user},dispatch]=useContext(UserContext);
+   
     console.log(cart);
     const signin=()=>{
         if(user){
             auth.signOut();
         }
     }
+    // console.log("email",user.email);
      
   return (
     <Link to='/'>
@@ -35,7 +36,7 @@ function Header() {
             <div className='header__navlinks'>
                 <Link to={!user && "/signin"} className="header__link">
                     <div className='header__options'>
-                        <label className='first_line'>Hello User</label>
+                        <label className='first_line'>Hello {user?.email}</label>
                         <label onClick={signin} className='second_line'>{user ? "Sign out":"sign in"}</label>
                     </div>
                 </Link>

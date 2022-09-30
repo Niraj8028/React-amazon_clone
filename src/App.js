@@ -1,4 +1,4 @@
-import React, { useReducer,useEffect, useContext} from 'react';
+import React, { useEffect, useContext} from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -10,13 +10,8 @@ import Home from './Components/Home/Home';
 import Signin from './Components/SignInPage/Signin';
 import { UserContext } from './Context/UserContext';
 
-
-
-
 function App() {
-  
-  
-  const[{cart},dispatch]=useContext(UserContext);
+  const[{user},dispatch]=useContext(UserContext);
 
   useEffect(() => {
     const unsubscribe= auth.onAuthStateChanged((authuser)=>{
@@ -32,14 +27,12 @@ function App() {
           user:null,
         })
       }
-    })
-  
+    })  
     return()=>{
       unsubscribe()
-    }
-    
+    } 
   }, [])
-  
+  console.log("user is",user)
 
   return (
     
